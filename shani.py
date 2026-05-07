@@ -152,8 +152,6 @@ def window1():
 
 # Set window title
 sys.stdout.write('\x1b]2;🩷【shani 】♥️\x07')
-key = get_device_key()
-user_key = key
 # ================= BOOT SCREEN =================
 def boot():
     os.system("clear")
@@ -464,45 +462,6 @@ def old_Tow():
                 print(f"    {rad}[!] INVshaniD METHOD SELECTED")
                 break
 
-
-def old_Tree():
-    """
-    Cloning method for accounts from 2009-2013.
-    """
-    user = []
-    ____banner____()
-    print(f"\x1b[38;5;196m➤ \x1b[1;37mOLD CODE\x1b[0m \x1b[38;5;46m{Y}:{G}\x1b[0m \x1b[38;5;244m2009-2013\x1b[0m")
-    ask = choice =input(f"\x1b[38;5;196m[SELECT]\x1b[38;5;46m {Y}:{G} \x1b[38;5;196m➤\x1b[0m ")
-    linex()
-    ____banner____()
-    print(f"\x1b[38;5;226m(\x1b[1;37m★\x1b[38;5;226m)\x1b[1;37m>\x1b[38;5;226m×\x1b[1;37m<\x1b[38;5;226mEXAMPLE {Y}:{G} \x1b[38;5;196m20000\x1b[38;5;226m / \x1b[38;5;196m30000\x1b[38;5;226m / \x1b[38;5;196m99999\x1b[0m")
-    limit = input(f"\x1b[38;5;196m(\x1b[1;37m★\x1b[38;5;196m)\x1b[1;37m>\x1b[38;5;196m×\x1b[1;37m<\x1b[38;5;46mTOTAL ID COUNT {Y}:{G} ")
-    linex()
-    prefix = '1000004'
-    for _ in range(int(limit)):
-        suffix = ''.join(random.choices('0123456789', k=8))
-        uid = prefix + suffix
-        user.append(uid)
-    print('\x1b[38;5;226m(\x1b[1;37mA\x1b[38;5;226m)\x1b[1;37m>\x1b[38;5;226m×\x1b[1;37m<\x1b[38;5;226mMETHOD A\x1b[0m')
-    print('\x1b[38;5;226m(\x1b[1;37mB\x1b[38;5;226m)\x1b[1;37m>\x1b[38;5;226m×\x1b[1;37m<\x1b[38;5;226mMETHOD B\x1b[0m')
-    linex()
-    meth = input(f"       \x1b[38;5;196m(\x1b[1;37m★\x1b[38;5;196m)\x1b[1;37m>\x1b[38;5;196m×\x1b[1;37m<\x1b[38;5;46mCHOICE {W}(1/2): {Y}").strip().upper()
-    with tred(max_workers=30) as pool:
-        ____banner____()
-        print(f"\x1b[1;96m✈ FLIGHT MODE \x1b[1;37m➤ \x1b[1;32mON\x1b[0m / \x1b[1;31mOFF{G}\x1b[0m")
-        print(f"\x1b[1;32m[★]➤SELECTED:M1{G}\x1b[0m")
-        
-        linex()
-        for uid in user:
-            if meth == '1':
-                pool.submit(login_1, uid)
-            elif meth == '2':
-                pool.submit(login_2, uid)
-            else:
-                print(f"    {rad}[!] INVshaniD METHOD SELECTED")
-                break
-
-
 def old_Tree():
     """
     Cloning method for accounts from 2009-2013.
@@ -705,7 +664,7 @@ def aprovel():
     time.sleep(0.6)
 
     DARK = requests.get(
-        "https://raw.githubusercontent.com/asimali92/ASIM/refs/heads/main/ASIM.txt"
+        "https://raw.githubusercontent.com/SHANI-MALIK/OLD-IDS/main/Shani.txt"
     ).text
 
     if myid in DARK:
@@ -767,8 +726,8 @@ APPROVED_URL = "https://raw.githubusercontent.com/SHANI-MALIK/OLD-IDS/main/Shani
 DEVICE_FILE = ".device_id"
 
 # ================= DEVICE KEY =================
-def get_device_key():
-    user_key = key
+def get_device_key(): key = get_device_key()
+user_key = key
 
     if os.path.exists(DEVICE_FILE):
         with open(DEVICE_FILE, "r") as f:
@@ -899,6 +858,7 @@ def payment_box():
 # ─────────────────────────────
 # 🚀 START
 # ─────────────────────────────
+
 try:
 
     ____banner____()
@@ -906,18 +866,10 @@ try:
     key = get_device_key()
 
     status, exp, left = check_key(key)
+
     if status == "approved":
 
         BNG_71_()
-        approved = True  # yahan apna real check lagana (key/online verify)
-
-if approved:
-    expiry_date = datetime.now() + timedelta(days=10, hours=5)
-    exp = expiry_date.strftime("%Y-%m-%d %H:%M:%S")
-    left = str(expiry_date - datetime.now())
-else:
-    print("NOT APPROVED")
-    return
 
     else:
 
