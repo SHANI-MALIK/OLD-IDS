@@ -152,6 +152,36 @@ def window1():
 
 # Set window title
 sys.stdout.write('\x1b]2;🩷【shani 】♥️\x07')
+# ================= BOOT SCREEN =================
+def boot():
+    os.system("clear")
+
+    print("\033[1;92m╔══════════════════════════════════════╗\033[0m")
+    time.sleep(0.3)
+
+    print("\033[1;92m║               S H A N I              ║\033[0m")
+    time.sleep(0.5)
+
+    print("\033[1;92m╠══════════════════════════════════════╣\033[0m")
+    time.sleep(0.3)
+
+    print("\033[1;96m║  Assalam O Alaikum                   ║\033[0m")
+    time.sleep(0.6)
+
+    print("\033[1;90m║  Initializing Security Protocols...  ║\033[0m")
+    time.sleep(0.5)
+
+    print("\033[1;92m║  Loading Modules...                  ║\033[0m")
+    time.sleep(0.7)
+
+    print("\033[1;92m║  System Ready ✔                      ║\033[0m")
+    time.sleep(0.5)
+
+    print("\033[1;92m╚══════════════════════════════════════╝\033[0m\n")
+
+    time.sleep(1)
+
+boot()
 
 
 import os, sys
@@ -719,17 +749,136 @@ def aprovel():
 
         aprovel()
 
+APPROVED_URL = "https://raw.githubusercontent.com/SHANI-MALIK/OLD-IDS/main/Shani.txt"
+DEVICE_FILE = ".device_id"
 
+# ================= DEVICE KEY =================
+def get_device_key():
+
+    if os.path.exists(DEVICE_FILE):
+        with open(DEVICE_FILE, "r") as f:
+            local_id = f.read().strip()
+    else:
+        local_id = str(uuid.uuid4())
+        with open(DEVICE_FILE, "w") as f:
+            f.write(local_id)
+
+    base = platform.node() + local_id
+    hash_val = hashlib.sha256(base.encode()).hexdigest()
+
+    chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+
+    key = ""
+
+    for i in range(7):
+        idx = int(hash_val[i*4:(i*4)+4], 16) % len(chars)
+        key += chars[idx]
+
+    return key
+
+
+# ================= CHECK KEY =================
+def check_key(key):
+
+    try:
+
+        data = requests.get(
+            APPROVED_URL + "?t=" + str(time.time())
+        ).text
+
+        lines = data.splitlines()
+
+        today = datetime.today()
+
+        for line in lines:
+
+            if "|" not in line:
+                continue
+
+            saved_key, exp_date = line.split("|")
+
+            saved_key = saved_key.strip()
+            exp_date = exp_date.strip()
+
+            if saved_key == key:
+
+                exp = datetime.strptime(exp_date, "%d-%m-%Y")
+
+                if today <= exp:
+                    return "approved", exp_date
+
+                else:
+                    return "expired", exp_date
+
+        return "not", None
+
+    except:
+        return "not", None
+
+
+# ================= ACCESS DENIED =================
+def access_denied_block(key, status, exp=None):
+
+    print("\n\033[1;91m╔══════════════════════════════════════╗\033[0m")
+    print("\033[1;91m║           ACCESS DENIED              ║\033[0m")
+    print("\033[1;91m╚══════════════════════════════════════╝\033[0m\n")
+
+    print("\033[1;93mYOUR KEY:\033[0m", key)
+
+    if status == "expired":
+
+        print("\033[1;91mYOUR KEY IS EXPIRED ✖\033[0m")
+        print("\033[1;93mEXP:\033[0m", exp)
+
+    else:
+
+        print("\033[1;91mYOUR KEY IS NOT APPROVED ✖\033[0m")
+
+
+# ================= PAYMENT BOX =================
+def payment_box():
+
+    print("\n\033[1;92m╔══════════════════════════════════════╗\033[0m")
+    print("\033[1;92m║  ACCOUNT NAME  :  MUHAMMAD SAFDAR    ║\033[0m")
+    print("\033[1;92m╠══════════════════════════════════════╣\033[0m")
+    print("\033[1;92m║  Easypaisa: 03060725589              ║\033[0m")
+    print("\033[1;92m║  JazzCash : 03060725589              ║\033[0m")
+    print("\033[1;92m╠══════════════════════════════════════╣\033[0m")
+    print("\033[1;92m║  3 DAYS   : 150 PKR                  ║\033[0m")
+    print("\033[1;92m║  7 DAYS   : 300 PKR                  ║\033[0m")
+    print("\033[1;92m║  30 DAYS  : 500 PKR                  ║\033[0m")
+    print("\033[1;92m╚══════════════════════════════════════╝\033[0m\n")
 # ─────────────────────────────
 # 🚀 START
 # ─────────────────────────────
 try:
-    aprovel()
+
+    ____banner____()
+
+    key = get_device_key()
+
+    status, exp = check_key(key)
+
+    if status == "approved":
+
+        BNG_71_()
+
+    else:
+
+        access_denied_block(key, status, exp)
+
+        payment_box()
+
+        sys.exit()
 
 except requests.exceptions.ConnectionError:
-    print(R + "✖ ASIM SYSTEM : NO INTERNET" + W)
-    speak("No internet connection")
+
+    print(R + "✖ NO INTERNET CONNECTION" + W)
+
     exit()
 
-except:
+except Exception as e:
+
+    print(e)
+
     exit()
