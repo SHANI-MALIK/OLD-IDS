@@ -149,7 +149,7 @@ def window1():
 
 
 # Set window title
-sys.stdout.write('\x1b]2;🩷【shani 】♥️\x07')
+sys.stdout.write('\x1b]2;🩷【SHANI~MALIK】♥️\x07')
 # ================= BOOT SCREEN =================
 def boot():
     os.system("clear")
@@ -237,7 +237,7 @@ def ____banner____():
     print(PINK + "╚══════════════════════════════════╝" + RESET)
 
     print(GREEN + "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━" + RESET)
-    print(f"{CYAN}➢ Tool Owner : {BOLD}}SHANI MALIK{RESET}")
+    print(f"{CYAN}➢ Tool Owner : {BOLD}SHANI MALIK{RESET}")
     print(f"{CYAN}➢ WhatsApp   : {BLUE}+923200795589{RESET}")
     print(f"{CYAN}➢ Tool Type  : {YELLOW}PREMIUM PAID TOOL{RESET}")
     print(f"{CYAN}➢ Version    : {GREEN}1.0{RESET}")
