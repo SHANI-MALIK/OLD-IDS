@@ -235,7 +235,6 @@ def ____banner____():
 
     # INFO PANEL
 print(GREEN + "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━" + RESET)
-
 print(f"{CYAN}[{GREEN}✓{CYAN}] \033[1;97mTool Owner : \033[1;96mSHANI MALIK{RESET}")
 print(f"{CYAN}[{GREEN}✓{CYAN}] \033[1;97mWhatsApp   : \033[1;92m+923200795589{RESET}")
 print(f"{CYAN}[{GREEN}✓{CYAN}] \033[1;97mTool Type  : \033[1;93mPREMIUM PAID TOOL{RESET}")
@@ -243,7 +242,6 @@ print(f"{CYAN}[{GREEN}✓{CYAN}] \033[1;97mVersion    : \033[1;95m1.0{RESET}")
 print(f"{CYAN}[{GREEN}✓{CYAN}] \033[1;97mDevice Key : \033[1;96m{user_key if user_key else 'LOADING...'}{RESET}")
 print(f"{CYAN}[{GREEN}✓{CYAN}] \033[1;97mExpiry     : \033[1;96m{exp if exp else 'N/A'}{RESET}")
 print(f"{CYAN}[{GREEN}✓{CYAN}] \033[1;97mTime Left  : \033[1;96m{left if left else 'N/A'}{RESET}")
-
 print(GREEN + "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━" + RESET)
 if __name__ == "__main__":
     ____banner____()
@@ -307,21 +305,30 @@ def clear():
 def linex():
     print('\x1b[1;96m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m')
 
-
 def BNG_71_():
     """
     Main menu function.
     """
-    ____banner____()
-    print('\x1b[38;5;45m╔═[\x1b[1;97m01\x1b[38;5;45m]═➤ \x1b[38;5;51mOLD CLONE \x1b[38;5;45m✦\x1b[0m')
-    linex()
-    __Jihad__ = choice = input(f"\x1b[38;5;196m➤\x1b[1;37m CHOICE {W}:{Y} \x1b[38;5;46m➤➤\x1b[0m ")
-    if __Jihad__ in ('1', 'a', '01', '1'):
-        old_clone()
-    else:
-        print(f"\n    {rad}Choose Vshanid Option... ")
-        time.sleep(2)
-        BNG_71_()
+    while True:
+
+        ____banner____()
+
+        print('\x1b[38;5;45m╔═[\x1b[1;97m01\x1b[38;5;45m]═➤ \x1b[38;5;51mOLD CLONE \x1b[38;5;45m✦\x1b[0m')
+        linex()
+
+        __Jihad__ = input(f"\x1b[38;5;196m➤\x1b[1;37m CHOICE {W}:{Y} \x1b[38;5;46m➤➤\x1b[0m ")
+
+        # VALID OPTIONS
+        if __Jihad__ in ('1', '01', 'a'):
+            old_clone()
+            break   # correct option -> exit menu loop
+
+        # INVALID OPTION
+        else:
+            print(f"\n{rad}⚠ Invalid option, try again...\x1b[0m")
+            time.sleep(1)
+            continue   # same menu repeat
+
 
 
 def old_clone():
