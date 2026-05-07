@@ -239,18 +239,13 @@ def ____banner____():
     print(f"{CYAN}[{GREEN}✓{CYAN}] \033[1;97mStatus     : \033[1;93mPREMIUM{RESET}")
     print(f"{CYAN}[{GREEN}✓{CYAN}] \033[1;97mVersion    : \033[1;95m0.1{RESET}")
 
-    try:
-        dev = platform.node()
-    except:
-        dev = "UNKNOWN"
+    print(f"{CYAN}[{GREEN}✓{CYAN}] \033[1;97mKey        : \033[1;96m{user_key}{RESET}")
 
-    print(f"{CYAN}[{GREEN}✓{CYAN}] \033[1;97mDevice     : \033[1;96m{dev}{RESET}")
+if 'exp' in globals():
+    print(f"{CYAN}[{GREEN}✓{CYAN}] \033[1;97mExpiry     : \033[1;93m{exp}{RESET}")
 
-    if 'exp' in globals():
-        print(f"{CYAN}[{GREEN}✓{CYAN}] \033[1;97mExpiry     : \033[1;93m{exp}{RESET}")
-
-    if 'left' in globals():
-        print(f"{CYAN}[{GREEN}✓{CYAN}] \033[1;97mTime Left  : \033[1;92m{left}{RESET}")
+if 'left' in globals():
+    print(f"{CYAN}[{GREEN}✓{CYAN}] \033[1;97mTime Left  : \033[1;92m{left}{RESET}")
     print(GREEN + "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━" + RESET)
 if __name__ == "__main__":
     ____banner____()
@@ -768,6 +763,7 @@ DEVICE_FILE = ".device_id"
 
 # ================= DEVICE KEY =================
 def get_device_key():
+    globals()['user_key'] = key
 
     if os.path.exists(DEVICE_FILE):
         with open(DEVICE_FILE, "r") as f:
