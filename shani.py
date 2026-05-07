@@ -224,13 +224,13 @@ def ____banner____():
     "╚════██║██╔══██║██╔══██║██║╚██╗██║██║",
     "███████║██║  ██║██║  ██║██║ ╚████║██║",
     "╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═══╝╚═╝"
-        print(RED + "I'm a gangster without a Gang" + RESET)
     ]
     
     for line in logo:
         print(CYAN + "║" + line.center(width) + "║")
 
     print(CYAN + "║" + " "*width + "║")
+    print(RED + "I'm a gangster without a Gang💀" + RESET)
     print(CYAN + "╚" + "═"*width + "╝" + RESET)
 
     # 🔥 INFO PANEL (FIXED HERE)
