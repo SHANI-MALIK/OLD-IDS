@@ -199,6 +199,7 @@ ITALIC  = "\033[3m"
 UNDERLINE = "\033[4m"
 BLINK   = "\033[5m"
 REVERSE = "\033[7m"
+PINK = "\033[38;5;203m"
 def ____banner____():
     import os, sys
     os.system('cls' if 'win' in sys.platform else 'clear')
