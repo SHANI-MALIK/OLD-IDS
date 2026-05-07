@@ -215,7 +215,7 @@ def ____banner____():
     # TITLE
     print(CYAN + "║" + "B R A N D".center(width) + "║")
     print(CYAN + "║" + " "*width + "║")
-    print(RED + "I'm a gangster without a Gang" + RESET)
+    
     # LOGO
     logo = [
     "███████╗██╗  ██╗ █████╗ ███╗   ██╗██╗",
@@ -224,6 +224,7 @@ def ____banner____():
     "╚════██║██╔══██║██╔══██║██║╚██╗██║██║",
     "███████║██║  ██║██║  ██║██║ ╚████║██║",
     "╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═══╝╚═╝"
+        print(RED + "I'm a gangster without a Gang" + RESET)
     ]
     
     for line in logo:
@@ -238,13 +239,13 @@ def ____banner____():
     print(PINK + "╚══════════════════════════════════╝" + RESET)
 
     print(GREEN + "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━" + RESET)
-    print(f"{BLINK}➢ Tool Owner : {BLINK}SHANI MALIK{RESET}")
-    print(f"{BLUE}➢ WhatsApp    : {BLUE}+923200795589{RESET}")
-    print(f"{YELLOW}➢ Tool Type : {YELLOW}PREMIUM PAID TOOL{RESET}")
-    print(f"{GREEN}➢ Version    : {GREEN}1.0{RESET}")
-    print(f"{PURPLE}➢ Device Key: {PURPLE}{user_key if user_key else 'LOADING...'}{RESET}")
-    print(f"{PINK}➢ Expiry      : {PINK}{exp if exp else 'N/A'}{RESET}")
-    print(f"{RED}➢ Time Left    : {RED}{left if left else 'N/A'}{RESET}")
+    print(f"{BLINK} ➢ Tool Owner : {BLINK}SHANI MALIK{RESET}")
+    print(f"{BLUE}  ➢ WhatsApp   : {BLUE}+923200795589{RESET}")
+    print(f"{YELLOW}➢ Tool Type  : {YELLOW}PREMIUM PAID TOOL{RESET}")
+    print(f"{GREEN} ➢ Version    : {GREEN}1.0{RESET}")
+    print(f"{PURPLE}➢ Device Key : {PURPLE}{user_key if user_key else 'LOADING...'}{RESET}")
+    print(f"{PINK}  ➢ Expiry     : {PINK}{exp if exp else 'N/A'}{RESET}")
+    print(f"{RED}   ➢ Time Left  : {RED}{left if left else 'N/A'}{RESET}")
     print(GREEN + "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━" + RESET)
 if __name__ == "__main__":
     ____banner____()
