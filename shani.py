@@ -239,10 +239,10 @@ def ____banner____():
     print(f"{CYAN}[{GREEN}✓{CYAN}] \033[1;97mKey        : \033[1;96m{user_key if user_key else 'LOADING...'}{RESET}")
 
 if 'exp' in globals():
-    print(f"{CYAN}[{GREEN}✓{CYAN}] \033[1;97mExpiry     : \033[1;93m{exp}{RESET}")
+    print(f"{CYAN}[{GREEN}✓{CYAN}] \033[1;97mExpiry     : \033[1;93m{exp if exp else 'N/A'}{RESET}")
 
 if 'left' in globals():
-    print(f"{CYAN}[{GREEN}✓{CYAN}] \033[1;97mTime Left  : \033[1;92m{left}{RESET}")
+    print(f"{CYAN}[{GREEN}✓{CYAN}] \033[1;97mTime Left  : \033[1;92m{left if left else 'N/A'}{RESET}")
     print(GREEN + "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━" + RESET)
 if __name__ == "__main__":
     ____banner____()
