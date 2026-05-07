@@ -18,12 +18,9 @@ from bs4 import BeautifulSoup
 from random import randint as rr
 from concurrent.futures import ThreadPoolExecutor as tred
 from os import system
-# 🔥 Force WhatsApp + Group Open Fix
-os.system('am start -a android.intent.action.VIEW -d "https://chat.whatsapp.com/ECcsbDeb8xGGhnBI5XwTH2?mode=gi_t" com.whatsapp')
-
-# Agar WhatsApp direct na le jaye to browser me open hoga
-os.system('am start -a android.intent.action.VIEW -d "https://chat.whatsapp.com/ECcsbDeb8xGGhnBI5XwTH2?mode=gi_t" com.whatsapp')
-
+user_key = None
+exp = None
+left = None
 # Suppress InsecureRequestWarning
 from requests.exceptions import ConnectionError
 from requests import api, models, sessions
@@ -239,7 +236,7 @@ def ____banner____():
     print(f"{CYAN}[{GREEN}✓{CYAN}] \033[1;97mStatus     : \033[1;93mPREMIUM{RESET}")
     print(f"{CYAN}[{GREEN}✓{CYAN}] \033[1;97mVersion    : \033[1;95m0.1{RESET}")
 
-    print(f"{CYAN}[{GREEN}✓{CYAN}] \033[1;97mKey        : \033[1;96m{user_key}{RESET}")
+    print(f"{CYAN}[{GREEN}✓{CYAN}] \033[1;97mKey        : \033[1;96m{user_key if user_key else 'LOADING...'}{RESET}")
 
 if 'exp' in globals():
     print(f"{CYAN}[{GREEN}✓{CYAN}] \033[1;97mExpiry     : \033[1;93m{exp}{RESET}")
