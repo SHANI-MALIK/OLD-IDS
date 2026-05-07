@@ -188,8 +188,6 @@ boot()
 
 import os, sys
 import os, sys, time
-key = get_device_key()
-globals()['user_key'] = key
 def ____banner____():
     import os, sys
     os.system('cls' if 'win' in sys.platform else 'clear')
