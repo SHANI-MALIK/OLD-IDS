@@ -215,7 +215,7 @@ def ____banner____():
     # TITLE
     print(CYAN + "║" + "B R A N D".center(width) + "║")
     print(CYAN + "║" + " "*width + "║")
-
+    print(RED + "I'm a gangster without a Gang" + RESET)
     # LOGO
     logo = [
     "███████╗██╗  ██╗ █████╗ ███╗   ██╗██╗",
@@ -225,7 +225,7 @@ def ____banner____():
     "███████║██║  ██║██║  ██║██║ ╚████║██║",
     "╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═══╝╚═╝"
     ]
-    print(RED + "I'm a gangster without a Gang" + RESET)
+    
     for line in logo:
         print(CYAN + "║" + line.center(width) + "║")
 
