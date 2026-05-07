@@ -27,8 +27,6 @@ from requests.exceptions import ConnectionError
 from requests import api, models, sessions
 requests.urllib3.disable_warnings()
 
-from datetime import datetime
-
 # Ensure required modules are installed
 modules = ['requests', 'urllib3', 'mechanize', 'rich']
 for module in modules:
@@ -245,14 +243,14 @@ def ____banner____():
     print(f"{CYAN}[{GREEN}✓{CYAN}] \033[1;97mKey        : \033[1;96m{user_key if user_key else 'LOADING...'}{RESET}")
 
 if exp:
-    print(f"{CYAN}[{GREEN}✓{CYAN}] Expiry     : {exp}{RESET}")
+    print(f"{CYAN}[{GREEN}✓{CYAN}] Expiry     : {exp if exp else 'N/A'}{RESET}")
 
 if left:
-    print(f"{CYAN}[{GREEN}✓{CYAN}] Time Left  : {left}{RESET}")
+    print(f"{CYAN}[{GREEN}✓{CYAN}] Time Left  : {left if left else 'N/A'}{RESET}")
     print(GREEN + "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━" + RESET)
 if __name__ == "__main__":
     ____banner____()
-____banner____()
+    
 def creationyear(uid):
     """
     Estimates the Facebook account creation year based on the UID.
