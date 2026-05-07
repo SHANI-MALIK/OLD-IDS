@@ -206,7 +206,7 @@ def ____banner____():
     print(CYAN + "╔" + "═"*width + "╗" + RESET)
 
     # TITLE
-    print(CYAN + "╔" + "═"*width + "╗" + RESET)
+    print(CYAN + "╔" + "═"*width [shani]+ "╗" + RESET)
 
     # TITLE
     print(CYAN + "║" + "S H A N I".center(width) + "║")
@@ -236,13 +236,11 @@ def ____banner____():
     # INFO PANEL
 print(GREEN + "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━" + RESET)
 
-print(f"{CYAN}[{GREEN}✓{CYAN}] \033[1;97mDeveloper  : \033[1;96mSHANI{RESET}")
-print(f"{CYAN}[{GREEN}✓{CYAN}] \033[1;97mOwner      : \033[1;92mSHANI{RESET}")
-print(f"{CYAN}[{GREEN}✓{CYAN}] \033[1;97mStatus     : \033[1;93mPREMIUM{RESET}")
-print(f"{CYAN}[{GREEN}✓{CYAN}] \033[1;97mVersion    : \033[1;95m0.1{RESET}")
-
-print(f"{CYAN}[{GREEN}✓{CYAN}] \033[1;97mKey        : \033[1;96m{user_key if user_key else 'LOADING...'}{RESET}")
-
+print(f"{CYAN}[{GREEN}✓{CYAN}] \033[1;97mTool Owner : \033[1;96mSHANI MALIK{RESET}")
+print(f"{CYAN}[{GREEN}✓{CYAN}] \033[1;97mWhatsApp   : \033[1;92m+923200795589{RESET}")
+print(f"{CYAN}[{GREEN}✓{CYAN}] \033[1;97mTool Type  : \033[1;93mPREMIUM PAID TOOL{RESET}")
+print(f"{CYAN}[{GREEN}✓{CYAN}] \033[1;97mVersion    : \033[1;95m1.0{RESET}")
+print(f"{CYAN}[{GREEN}✓{CYAN}] \033[1;97mDevice Key : \033[1;96m{user_key if user_key else 'LOADING...'}{RESET}")
 print(f"{CYAN}[{GREEN}✓{CYAN}] \033[1;97mExpiry     : \033[1;96m{exp if exp else 'N/A'}{RESET}")
 print(f"{CYAN}[{GREEN}✓{CYAN}] \033[1;97mTime Left  : \033[1;96m{left if left else 'N/A'}{RESET}")
 
