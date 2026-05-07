@@ -230,7 +230,7 @@ def ____banner____():
         print(CYAN + "║" + line.center(width) + "║")
 
     print(CYAN + "║" + " "*width + "║")
-    print(RED + "║" + "I'm a gangster without a Gang💀".center(48) + "║" + RESET)
+    print(RED + "║" + "I'm a gangster without a Gang💀".center(49) + "║" + RESET)
     print(CYAN + "╚" + "═"*width + "╝" + RESET)
 
     # 🔥 INFO PANEL (FIXED HERE)
