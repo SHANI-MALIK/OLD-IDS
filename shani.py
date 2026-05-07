@@ -229,7 +229,7 @@ def ____banner____():
 
     # PANEL
     print(PINK + "╔══════════════════════════════════╗" + RESET)
-    print("\x1b[1;93m║     ✦ TOOL INFO PANEL ✦         ║\x1b[0m")
+    print("\x1b[1;93m║     ✦ TOOL INFO PANEL ✦          ║\x1b[0m")
     print(PINK + "╚══════════════════════════════════╝" + RESET)
 
     # INFO PANEL
@@ -239,6 +239,18 @@ def ____banner____():
     print(f"{CYAN}[{GREEN}✓{CYAN}] \033[1;97mStatus     : \033[1;93mPREMIUM{RESET}")
     print(f"{CYAN}[{GREEN}✓{CYAN}] \033[1;97mVersion    : \033[1;95m0.1{RESET}")
 
+    try:
+        dev = platform.node()
+    except:
+        dev = "UNKNOWN"
+
+    print(f"{CYAN}[{GREEN}✓{CYAN}] \033[1;97mDevice     : \033[1;96m{dev}{RESET}")
+
+    if 'exp' in globals():
+        print(f"{CYAN}[{GREEN}✓{CYAN}] \033[1;97mExpiry     : \033[1;93m{exp}{RESET}")
+
+    if 'left' in globals():
+        print(f"{CYAN}[{GREEN}✓{CYAN}] \033[1;97mTime Left  : \033[1;92m{left}{RESET}")
     print(GREEN + "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━" + RESET)
 if __name__ == "__main__":
     ____banner____()
@@ -325,7 +337,7 @@ def old_clone():
     """
     ____banner____()
     print("\x1b[38;5;201m╔══════════════════════════════════╗\x1b[0m")
-    print("\x1b[38;5;201m║  \x1b[1;33mOLD ACCOUNT CRACKER\x1b[38;5;201m      ║\x1b[0m")
+    print("\x1b[38;5;201m║  \x1b[1;33mOLD ACCOUNT CRACKER\x1b[38;5;201m       ║\x1b[0m")
     print("\x1b[38;5;201m╠══════════════════════════════════╣\x1b[0m")
     print("\x1b[38;5;201m║ \x1b[1;96m[1]\x1b[1;32m CRACK ALL ACCOUNTS       \x1b[38;5;201m║\x1b[0m")
     print("\x1b[38;5;201m║ \x1b[1;96m[2]\x1b[1;32m 100004 / 100004          \x1b[38;5;201m║\x1b[0m")
@@ -790,7 +802,7 @@ def check_key(key):
 
         lines = data.splitlines()
 
-        today = datetime.today()
+        now = datetime.now()
 
         for line in lines:
 
@@ -804,18 +816,51 @@ def check_key(key):
 
             if saved_key == key:
 
-                exp = datetime.strptime(exp_date, "%d-%m-%Y")
+                try:
 
-                if today <= exp:
-                    return "approved", exp_date
+                    exp = datetime.strptime(
+                        exp_date,
+                        "%d-%m-%Y %I:%M %p"
+                    )
+
+                except:
+                    return "not", None, None
+
+                if now <= exp:
+
+                    remaining = exp - now
+
+                    days = remaining.days
+
+                    hours = remaining.seconds // 3600
+
+                    minutes = (
+                        remaining.seconds % 3600
+                    ) // 60
+
+                    left = (
+                        f"{days}D {hours}H {minutes}M"
+                    )
+
+                    return (
+                        "approved",
+                        exp_date,
+                        left
+                    )
 
                 else:
-                    return "expired", exp_date
 
-        return "not", None
+                    return (
+                        "expired",
+                        exp_date,
+                        "0D 0H 0M"
+                    )
+
+        return "not", None, None
 
     except:
-        return "not", None
+
+        return "not", None, None
 
 
 # ================= ACCESS DENIED =================
@@ -859,8 +904,7 @@ try:
 
     key = get_device_key()
 
-    status, exp = check_key(key)
-
+    status, exp, left = check_key(key)
     if status == "approved":
 
         BNG_71_()
