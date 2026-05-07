@@ -18,6 +18,7 @@ from bs4 import BeautifulSoup
 from random import randint as rr
 from concurrent.futures import ThreadPoolExecutor as tred
 from os import system
+from datetime import datetime, timedelta
 user_key = None
 exp = None
 left = None
@@ -909,8 +910,6 @@ try:
 
         BNG_71_()
         approved = True  # yahan apna real check lagana (key/online verify)
-
-from datetime import datetime, timedelta
 
 if approved:
     expiry_date = datetime.now() + timedelta(days=10, hours=5)
