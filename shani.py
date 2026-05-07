@@ -188,6 +188,8 @@ boot()
 
 import os, sys
 import os, sys, time
+key = get_device_key()
+globals()['user_key'] = key
 def ____banner____():
     import os, sys
     os.system('cls' if 'win' in sys.platform else 'clear')
@@ -763,7 +765,7 @@ DEVICE_FILE = ".device_id"
 
 # ================= DEVICE KEY =================
 def get_device_key():
-    globals()['user_key'] = key
+    user_key = key
 
     if os.path.exists(DEVICE_FILE):
         with open(DEVICE_FILE, "r") as f:
