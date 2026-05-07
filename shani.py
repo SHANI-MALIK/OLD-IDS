@@ -224,7 +224,7 @@ def ____banner____():
     "╚════██║██╔══██║██╔══██║██║╚██╗██║██║",
     "███████║██║  ██║██║  ██║██║ ╚████║██║",
     "╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═══╝╚═╝"
-    ] {RED}I'm a gangster without a Gang{RESET}
+    ] {RED}Im a gangster without a Gang{RESET}
 
     for line in logo:
         print(CYAN + "║" + line.center(width) + "║")
