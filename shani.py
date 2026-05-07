@@ -184,21 +184,24 @@ boot()
 
 import os, sys
 import os, sys, time
-CYAN = "\033[1;96m"
-GREEN = "\033[1;92m"
-PINK = "\033[1;95m"
-RED = "\033[1;31m"
-RESET = "\033[0m"
+RESET   = "\033[0m"
+BLACK   = "\033[1;30m"
+RED     = "\033[1;31m"
+GREEN   = "\033[1;32m"
+YELLOW  = "\033[1;33m"
+BLUE    = "\033[1;34m"
+PURPLE  = "\033[1;35m"
+CYAN    = "\033[1;36m"
+WHITE   = "\033[1;37m"
+BOLD    = "\033[1m"
+DIM     = "\033[2m"
+ITALIC  = "\033[3m"
+UNDERLINE = "\033[4m"
+BLINK   = "\033[5m"
+REVERSE = "\033[7m"
 def ____banner____():
     import os, sys
     os.system('cls' if 'win' in sys.platform else 'clear')
-
-    CYAN = "\033[1;96m"
-    PINK = "\033[1;95m"
-    GREEN = "\033[1;92m"
-    RED = "\033[1;31m"
-    BLACK = "\033[1;30m"
-    RESET = "\033[0m"
 
     width = 50
 
@@ -234,9 +237,9 @@ def ____banner____():
     print(PINK + "╚══════════════════════════════════╝" + RESET)
 
     print(GREEN + "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━" + RESET)
-    print(f"{CYAN}➢ Tool Owner : {YELLOW}SHANI MALIK{RESET}")
+    print(f"{CYAN}➢ Tool Owner : {BOLD}}SHANI MALIK{RESET}")
     print(f"{CYAN}➢ WhatsApp   : {BLUE}+923200795589{RESET}")
-    print(f"{CYAN}➢ Tool Type  : {CYAN}PREMIUM PAID TOOL{RESET}")
+    print(f"{CYAN}➢ Tool Type  : {YELLOW}PREMIUM PAID TOOL{RESET}")
     print(f"{CYAN}➢ Version    : {GREEN}1.0{RESET}")
     print(f"{CYAN}➢ Device Key : {PURPLE}{user_key if user_key else 'LOADING...'}{RESET}")
     print(f"{CYAN}➢ Expiry     : {PINK}{exp if exp else 'N/A'}{RESET}")
