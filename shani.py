@@ -234,13 +234,13 @@ def ____banner____():
     print(PINK + "╚══════════════════════════════════╝" + RESET)
 
     print(GREEN + "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━" + RESET)
-    print(f"{CYAN}[✓] Tool Owner : SHANI MALIK{RESET}")
-    print(f"{CYAN}[✓] WhatsApp   : +923200795589{RESET}")
-    print(f"{CYAN}[✓] Tool Type  : PREMIUM PAID TOOL{RESET}")
-    print(f"{CYAN}[✓] Version    : 1.0{RESET}")
-    print(f"{CYAN}[✓] Device Key : {user_key if user_key else 'LOADING...'}{RESET}")
-    print(f"{CYAN}[✓] Expiry     : {exp if exp else 'N/A'}{RESET}")
-    print(f"{CYAN}[✓] Time Left  : {left if left else 'N/A'}{RESET}")
+    print(f"{CYAN}{GREEN}[✓] Tool Owner : SHANI MALIK{RESET}")
+    print(f"{CYAN}{GREEN}[✓] WhatsApp   : +923200795589{RESET}")
+    print(f"{CYAN}{GREEN}[✓] Tool Type  : PREMIUM PAID TOOL{RESET}")
+    print(f"{CYAN}{GREEN}[✓] Version    : 1.0{RESET}")
+    print(f"{CYAN}{GREEN}[✓] Device Key : {user_key if user_key else 'LOADING...'}{RESET}")
+    print(f"{CYAN}{GREEN}[✓] Expiry     : {exp if exp else 'N/A'}{RESET}")
+    print(f"{CYAN}{GREEN}[✓] Time Left  : {left if left else 'N/A'}{RESET}")
     print(GREEN + "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━" + RESET)
 if __name__ == "__main__":
     ____banner____()
@@ -336,12 +336,12 @@ def old_clone():
     """
     ____banner____()
     print("\x1b[38;5;201m╔══════════════════════════════════╗\x1b[0m")
-    print("\x1b[38;5;201m║  \x1b[1;33mOLD ACCOUNT CRACKER\x1b[38;5;201m       ║\x1b[0m")
+    print("\x1b[38;5;201m║  \x1b[1;33mOLD ACCOUNT CRACKER\x1b[38;5;201m         ║\x1b[0m")
     print("\x1b[38;5;201m╠══════════════════════════════════╣\x1b[0m")
-    print("\x1b[38;5;201m║ \x1b[1;96m[1]\x1b[1;32m CRACK ALL ACCOUNTS       \x1b[38;5;201m║\x1b[0m")
-    print("\x1b[38;5;201m║ \x1b[1;96m[2]\x1b[1;32m 100004 / 100004          \x1b[38;5;201m║\x1b[0m")
-    print("\x1b[38;5;201m║ \x1b[1;96m[3]\x1b[1;32m CRACK 2009-2013 ACCOUNTS \x1b[38;5;201m║\x1b[0m")
-    print("\x1b[38;5;201m║ \x1b[1;96m[0]\x1b[1;31m BACK TO MAIN MENU        \x1b[38;5;201m║\x1b[0m")
+    print("\x1b[38;5;201m║ \x1b[1;96m[1]\x1b[1;32m CRACK ALL ACCOUNTS        \x1b[38;5;201m║\x1b[0m")
+    print("\x1b[38;5;201m║ \x1b[1;96m[2]\x1b[1;32m 100004 / 100004           \x1b[38;5;201m║\x1b[0m")
+    print("\x1b[38;5;201m║ \x1b[1;96m[3]\x1b[1;32m CRACK 2009-2013 ACCOUNTS  \x1b[38;5;201m║\x1b[0m")
+    print("\x1b[38;5;201m║ \x1b[1;96m[0]\x1b[1;31m BACK TO MAIN MENU         \x1b[38;5;201m║\x1b[0m")
     print("\x1b[38;5;201m╚══════════════════════════════════╝\x1b[0m")
     _input = choice = input(f"\x1b[38;5;196m➤\x1b[1;37m CHOICE {W}:{Y} \x1b[38;5;46m➤➤\x1b[0m ")
     if _input in ('1', 'a', '01', '1'):
@@ -369,7 +369,7 @@ def old_One():
     print("\x1b[1;97m[\x1b[1;92m4\x1b[1;97m]\x1b[0m \x1b[1;96m100003\x1b[0m")
     print("\x1b[1;97m[\x1b[1;92m5\x1b[1;97m]\x1b[0m \x1b[1;96m100004\x1b[0m\n")
     print("\x1b[1;95m╔══════════════════════════════════╗\x1b[0m")
-    print("\x1b[1;93m║  ★ PREMIUM TOOL INTERFACE ★     ║\x1b[0m")
+    print("\x1b[1;93m║  ★ PREMIUM TOOL INTERFACE ★      ║\x1b[0m")
     print("\x1b[1;95m╚══════════════════════════════════╝\x1b[0m\n")
     ask = choice = input(f"\x1b[38;5;196m➤\x1b[1;37m CHOICE {W}:{Y} \x1b[38;5;46m➤➤\x1b[0m ")
     linex()
@@ -395,7 +395,7 @@ def old_One():
         ____banner____()
         print(f"\x1b[1;96m[★]➤ TOTAL IDS CRACK : \x1b[1;32m{limit:<10}\x1b[0m")
         print(f"\x1b[1;96m[★]➤ SELECTED        : \x1b[1;32mM1\x1b[0m")
-        print(f"\x1b[1;96m[★]➤ FLIGHT MODE     : \x1b[1;32mON\x1b[0m / \x1b[1;31mOFF\x1b[0m")
+        print(f"\x1b[1;96m[★]➤ USE VPN         : \x1b[1;32m1.1.1.1\x1b[0m / \x1b[1;31mPROTON\x1b[0m")
         linex()
         for mal in user:
             uid = star + mal
@@ -424,7 +424,7 @@ def old_Tow():
     print("\x1b[1;97m[\x1b[1;92m5\x1b[1;97m]\x1b[0m \x1b[1;96m100004\x1b[0m\n")
 
     print("\x1b[1;95m╔══════════════════════════════════╗\x1b[0m")
-    print("\x1b[1;93m║  ★ PREMIUM TOOL INTERFACE ★     ║\x1b[0m")
+    print("\x1b[1;93m║  ★ PREMIUM TOOL INTERFACE ★      ║\x1b[0m")
     print("\x1b[1;95m╚══════════════════════════════════╝\x1b[0m\n")
     ask = choice = input(f"\x1b[38;5;196m[SELECT]\x1b[38;5;46m {Y}:{G} \x1b[38;5;196m➤\x1b[0m ")
     linex()
@@ -452,7 +452,7 @@ def old_Tow():
         ____banner____()
         print(f"\x1b[1;96m[★]➤ TOTAL IDS CRACK : \x1b[1;32m{limit:<10}\x1b[0m")
         print(f"\x1b[1;96m[★]➤ SELECTED        : \x1b[1;32mM1\x1b[0m")
-        print(f"\x1b[1;96m[★]➤ FLIGHT MODE     : \x1b[1;32mON\x1b[0m / \x1b[1;31mOFF\x1b[0m")
+        print(f"\x1b[1;96m[★]➤ USE VPN         : \x1b[1;32m1.1.1.1\x1b[0m / \x1b[1;31mPROTON\x1b[0m")
         linex()
         for uid in user:
             if meth == '1':
