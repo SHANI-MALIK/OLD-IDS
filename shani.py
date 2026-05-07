@@ -151,6 +151,8 @@ def window1():
 
 # Set window title
 sys.stdout.write('\x1b]2;🩷【shani 】♥️\x07')
+key = get_device_key()
+user_key = key
 # ================= BOOT SCREEN =================
 def boot():
     os.system("clear")
@@ -185,6 +187,11 @@ boot()
 
 import os, sys
 import os, sys, time
+CYAN = "\033[1;96m"
+GREEN = "\033[1;92m"
+PINK = "\033[1;95m"
+RED = "\033[1;31m"
+RESET = "\033[0m"
 def ____banner____():
     import os, sys
     os.system('cls' if 'win' in sys.platform else 'clear')
@@ -238,11 +245,11 @@ def ____banner____():
 
     print(f"{CYAN}[{GREEN}✓{CYAN}] \033[1;97mKey        : \033[1;96m{user_key if user_key else 'LOADING...'}{RESET}")
 
-if 'exp' in globals():
-    print(f"{CYAN}[{GREEN}✓{CYAN}] \033[1;97mExpiry     : \033[1;93m{exp if exp else 'N/A'}{RESET}")
+if exp:
+    print(f"{CYAN}[{GREEN}✓{CYAN}] Expiry     : {exp}{RESET}")
 
-if 'left' in globals():
-    print(f"{CYAN}[{GREEN}✓{CYAN}] \033[1;97mTime Left  : \033[1;92m{left if left else 'N/A'}{RESET}")
+if left:
+    print(f"{CYAN}[{GREEN}✓{CYAN}] Time Left  : {left}{RESET}")
     print(GREEN + "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━" + RESET)
 if __name__ == "__main__":
     ____banner____()
@@ -901,6 +908,17 @@ try:
     if status == "approved":
 
         BNG_71_()
+        approved = True  # yahan apna real check lagana (key/online verify)
+
+from datetime import datetime, timedelta
+
+if approved:
+    expiry_date = datetime.now() + timedelta(days=10, hours=5)
+    exp = expiry_date.strftime("%Y-%m-%d %H:%M:%S")
+    left = str(expiry_date - datetime.now())
+else:
+    print("NOT APPROVED")
+    return
 
     else:
 
