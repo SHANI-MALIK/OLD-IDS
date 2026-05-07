@@ -206,10 +206,10 @@ def ____banner____():
     print(CYAN + "╔" + "═"*width + "╗" + RESET)
 
     # TITLE
-    print(CYAN + "╔" + "═"*width [shani]+ "╗" + RESET)
+    print(CYAN + "╔" + "═"*width + "╗" + RESET)
 
     # TITLE
-    print(CYAN + "║" + "S H A N I".center(width) + "║")
+    print(CYAN + "║" + "B R A N D".center(width) + "║")
     print(CYAN + "║" + " "*width + "║")
 
     # LOGO
