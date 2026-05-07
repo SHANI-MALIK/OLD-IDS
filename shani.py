@@ -726,18 +726,20 @@ APPROVED_URL = "https://raw.githubusercontent.com/SHANI-MALIK/OLD-IDS/main/Shani
 DEVICE_FILE = ".device_id"
 
 # ================= DEVICE KEY =================
-def get_device_key(): key = get_device_key()
-user_key = key
+def get_device_key():
 
     if os.path.exists(DEVICE_FILE):
         with open(DEVICE_FILE, "r") as f:
             local_id = f.read().strip()
+
     else:
         local_id = str(uuid.uuid4())
+
         with open(DEVICE_FILE, "w") as f:
             f.write(local_id)
 
     base = platform.node() + local_id
+
     hash_val = hashlib.sha256(base.encode()).hexdigest()
 
     chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
@@ -750,6 +752,8 @@ user_key = key
 
     return key
 
+key = get_device_key()
+user_key = key
 
 # ================= CHECK KEY =================
 def check_key(key):
