@@ -228,21 +228,20 @@ def ____banner____():
     print(CYAN + "║" + " "*width + "║")
     print(CYAN + "╚" + "═"*width + "╝" + RESET)
 
-    # PANEL
+    # 🔥 INFO PANEL (FIXED HERE)
     print(PINK + "╔══════════════════════════════════╗" + RESET)
-    print("\x1b[1;93m║     ✦ TOOL INFO PANEL ✦          ║\x1b[0m")
+    print("║     ✦ TOOL INFO PANEL ✦          ║")
     print(PINK + "╚══════════════════════════════════╝" + RESET)
 
-    # INFO PANEL
-print(GREEN + "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━" + RESET)
-print(f"{CYAN}[{GREEN}✓{CYAN}] \033[1;97mTool Owner : \033[1;96mSHANI MALIK{RESET}")
-print(f"{CYAN}[{GREEN}✓{CYAN}] \033[1;97mWhatsApp   : \033[1;92m+923200795589{RESET}")
-print(f"{CYAN}[{GREEN}✓{CYAN}] \033[1;97mTool Type  : \033[1;93mPREMIUM PAID TOOL{RESET}")
-print(f"{CYAN}[{GREEN}✓{CYAN}] \033[1;97mVersion    : \033[1;95m1.0{RESET}")
-print(f"{CYAN}[{GREEN}✓{CYAN}] \033[1;97mDevice Key : \033[1;96m{user_key if user_key else 'LOADING...'}{RESET}")
-print(f"{CYAN}[{GREEN}✓{CYAN}] \033[1;97mExpiry     : \033[1;96m{exp if exp else 'N/A'}{RESET}")
-print(f"{CYAN}[{GREEN}✓{CYAN}] \033[1;97mTime Left  : \033[1;96m{left if left else 'N/A'}{RESET}")
-print(GREEN + "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━" + RESET)
+    print(GREEN + "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━" + RESET)
+    print(f"{CYAN}[✓] Tool Owner : SHANI MALIK{RESET}")
+    print(f"{CYAN}[✓] WhatsApp   : +923200795589{RESET}")
+    print(f"{CYAN}[✓] Tool Type  : PREMIUM PAID TOOL{RESET}")
+    print(f"{CYAN}[✓] Version    : 1.0{RESET}")
+    print(f"{CYAN}[✓] Device Key : {user_key if user_key else 'LOADING...'}{RESET}")
+    print(f"{CYAN}[✓] Expiry     : {exp if exp else 'N/A'}{RESET}")
+    print(f"{CYAN}[✓] Time Left  : {left if left else 'N/A'}{RESET}")
+    print(GREEN + "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━" + RESET)
 if __name__ == "__main__":
     ____banner____()
     
