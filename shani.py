@@ -851,7 +851,6 @@ def access_denied_block(key, status, exp=None):
 
         print("\033[1;91mYOUR KEY IS NOT APPROVED ✖\033[0m")
 
-
 # ================= PAYMENT BOX =================
 def payment_box():
 
@@ -864,13 +863,17 @@ def payment_box():
     print("\033[1;92m║  3 DAYS   : 150 PKR                  ║\033[0m")
     print("\033[1;92m║  7 DAYS   : 300 PKR                  ║\033[0m")
     print("\033[1;92m║  30 DAYS  : 500 PKR                  ║\033[0m")
-    print("\033[1;92m╚══════════════════════════════════════╝\033[0m\n")
+    print("\033[1;92m╚══════════════════════════════════════╝\033[0m")
+
     print(f"\n{GREEN}Press Enter To Send Message To Admin{RESET}")
-input()
+    input()
 
-msg = f"Assalam O Alaikum Shani Bhai,%0A%0AMy Device Key Is : {user_key}%0A%0APlease Approve My Key."
+    msg = f"Assalam O Alaikum Shani Bhai,%0A%0AMy Device Key Is : {user_key}%0A%0APlease Approve My Key."
 
-os.system(f'am start -a android.intent.action.VIEW -d "https://wa.me/923200795589?text={msg}"')
+    os.system(
+        f'am start -a android.intent.action.VIEW -d "https://wa.me/923200795589?text={msg}"'
+    )
+
 # ─────────────────────────────
 # 🚀 START
 # ─────────────────────────────
