@@ -658,7 +658,7 @@ def getKey():
     id = "".join(uuidd).replace("_","").replace("365","ASIM").replace("u","9")
     return "ASIM-41" + id
 
-APPROVED_URL = "https://your-railway-app.up.railway.app/check/"
+APPROVED_URL = "https://raw.githubusercontent.com/SHANI-MALIK/OLD-IDS/main/Shani.txt"
 DEVICE_FILE = ".device_id"
 
 # ================= DEVICE KEY =================
