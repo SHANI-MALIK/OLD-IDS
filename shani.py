@@ -658,77 +658,7 @@ def getKey():
     id = "".join(uuidd).replace("_","").replace("365","ASIM").replace("u","9")
     return "ASIM-41" + id
 
-
-# ─────────────────────────────
-# ⚡ APPROVAL SYSTEM (ASIM UI)
-# ─────────────────────────────
-def aprovel():
-    myid = getKey()
-    os.system("clear")
-
-    ____banner____()
-    time.sleep(0.6)
-
-    DARK = requests.get(
-        "https://raw.githubusercontent.com/SHANI-MALIK/OLD-IDS/main/Shani.txt"
-    ).text
-
-    if myid in DARK:
-        os.system("clear")
-        ____banner____()
-
-        speak("Access granted")
-
-        BNG_71_()
-
-    else:
-        os.system("clear")
-        ____banner____()
-
-        print(R + """
-╔════════════════════════════════════╗
-║         ✖ ACCESS BLOCKED          ║
-╚════════════════════════════════════╝
-""" + W)
-
-        speak("Access denied")
-
-        print(Y + """
-╔════════════════════════════════════╗
-║  ➤ SYSTEM STATUS : UNAUTHORIZED   ║
-║  ➤ ACCESS LEVEL : DENIED          ║
-╚════════════════════════════════════╝
-""" + W)
-
-        print(G + """
-────────────────────────────────────
-         ⚡ A S I M  RULES
-────────────────────────────────────
-➤ Only approved users allowed
-➤ Unknown keys rejected instantly
-➤ System protected by ASIM security
-────────────────────────────────────
-""" + W)
-
-        print(C + "🔑 YOUR ASIM KEY:\n➤ " + myid + W + "\n")
-
-        speak("Your key generated")
-
-        input(P + "▶ Press Enter to send request..." + W)
-
-        tks = (
-            "ASIM%20REQUEST%20🔥%0A"
-            "Please%20Approve%20My%20Key%20Fast%0A"
-            "Key:%20" + myid
-        )
-
-        os.system(
-            f'termux-open-url "https://wa.me/+923704494742?text={tks}"'
-        )
-
-        aprovel()
-
-APPROVED_URL = "https://raw.githubusercontent.com/SHANI-MALIK/OLD-IDS/main/Shani.txt"
+APPROVED_URL = "https://your-railway-app.up.railway.app/check/"
 DEVICE_FILE = ".device_id"
 
 # ================= DEVICE KEY =================
