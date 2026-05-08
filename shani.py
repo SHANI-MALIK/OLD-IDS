@@ -341,12 +341,12 @@ def old_clone():
     """
     ____banner____()
     print("\x1b[38;5;201m╔══════════════════════════════════╗\x1b[0m")
-    print("\x1b[38;5;201m║  \x1b[1;33mOLD ACCOUNT CRACKER\x1b[38;5;201m         ║\x1b[0m")
+    print("\x1b[38;5;201m║  \x1b[1;33mOLD ACCOUNT CRACKER\x1b[38;5;201m             ║\x1b[0m")
     print("\x1b[38;5;201m╠══════════════════════════════════╣\x1b[0m")
-    print("\x1b[38;5;201m║ \x1b[1;96m[1]\x1b[1;32m CRACK ALL ACCOUNTS        \x1b[38;5;201m║\x1b[0m")
-    print("\x1b[38;5;201m║ \x1b[1;96m[2]\x1b[1;32m 100004 / 100004           \x1b[38;5;201m║\x1b[0m")
-    print("\x1b[38;5;201m║ \x1b[1;96m[3]\x1b[1;32m CRACK 2009-2013 ACCOUNTS  \x1b[38;5;201m║\x1b[0m")
-    print("\x1b[38;5;201m║ \x1b[1;96m[0]\x1b[1;31m BACK TO MAIN MENU         \x1b[38;5;201m║\x1b[0m")
+    print("\x1b[38;5;201m║ \x1b[1;96m[1]\x1b[1;32m CRACK ALL ACCOUNTS            \x1b[38;5;201m║\x1b[0m")
+    print("\x1b[38;5;201m║ \x1b[1;96m[2]\x1b[1;32m 100004 / 100004               \x1b[38;5;201m║\x1b[0m")
+    print("\x1b[38;5;201m║ \x1b[1;96m[3]\x1b[1;32m CRACK 2009-2013 ACCOUNTS      \x1b[38;5;201m║\x1b[0m")
+    print("\x1b[38;5;201m║ \x1b[1;96m[0]\x1b[1;31m BACK TO MAIN MENU             \x1b[38;5;201m║\x1b[0m")
     print("\x1b[38;5;201m╚══════════════════════════════════╝\x1b[0m")
     _input = choice = input(f"\x1b[38;5;196m➤\x1b[1;37m CHOICE {W}:{Y} \x1b[38;5;46m➤➤\x1b[0m ")
     if _input in ('1', 'a', '01', '1'):
